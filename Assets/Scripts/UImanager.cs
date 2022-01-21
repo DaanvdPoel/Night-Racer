@@ -8,6 +8,11 @@ public class UImanager : MonoBehaviour
     [SerializeField] private Text timer; 
     private float time;
 
+    private void Update()
+    {
+        raceTimer(true);
+    }
+
     public void raceTimer(bool isRunning) 
     {
         if(isRunning == true)
@@ -15,8 +20,6 @@ public class UImanager : MonoBehaviour
             time = time + Time.deltaTime;
         }
 
-        timer.text = "Time: " + time;
-
+        timer.text = "Time: " + time.ToString("0.0");
     }
-
 }
