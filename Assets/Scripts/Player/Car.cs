@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 [System.Serializable]
 public class AxleInfo
@@ -22,6 +23,7 @@ public class Car : MonoBehaviour
 
     // Unityeditor unaccesible variables.
     private Rigidbody m_rigidBody;
+    private float m_currentSpeed;
 
     private void Start()
     {
@@ -34,12 +36,18 @@ public class Car : MonoBehaviour
         Steering();
         DownForce();
         Drift();
+
+        m_currentSpeed = m_rigidBody.velocity.magnitude * 3.6f;
     }
 
     private void Update()
     {
+        LimitSteering();
     }
 
+    /// <summary>
+    /// Applies steering and torgue to the car.
+    /// </summary>
     private void Steering()
     {
         float _motor = m_settings.maxMotorTorque * Input.GetAxis("Vertical");
@@ -69,22 +77,27 @@ public class Car : MonoBehaviour
         {
             if (_axleInfo.motor)
             {
-                _axleInfo.leftWheel.brakeTorque = 0;
-                _axleInfo.rightWheel.brakeTorque = 0;
-            }
-        }
-        foreach (AxleInfo _axleInfo in m_axleInfos)
-        {
-            if (_axleInfo.motor)
-            {
-                _axleInfo.leftWheel.brakeTorque = (m_settings.maxMotorTorque * 1.1f) * Input.GetAxisRaw("Break");
-                _axleInfo.rightWheel.brakeTorque = (m_settings.maxMotorTorque * 1.1f) * Input.GetAxisRaw("Break");
+                _axleInfo.leftWheel.brakeTorque = m_settings.maxMotorTorque * Input.GetAxisRaw("Break");
+                _axleInfo.rightWheel.brakeTorque = m_settings.maxMotorTorque * Input.GetAxisRaw("Break");
+
+
             }
         }
     }
 
+    /// <summary>
+    /// Limits the maximum steering angle depending on the speed of the car.
+    /// </summary>
+    private void LimitSteering()
+    {
+
+    }
+
+    /// <summary>
+    /// Applies downforce to the car.
+    /// </summary>
     private void DownForce()
     {
-        m_rigidBody.AddForce(-Vector3.up * m_settings.downForce, ForceMode.Force);
+        m_rigidBody.AddForce(-transform.up * m_settings.downForce, ForceMode.Force);
     }
 }
