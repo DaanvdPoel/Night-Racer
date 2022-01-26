@@ -32,8 +32,7 @@ public class Car : MonoBehaviour
     }
 
     public void FixedUpdate()
-    {
-        Steering();
+    {     
         DownForce();
         Drift();
 
@@ -42,7 +41,7 @@ public class Car : MonoBehaviour
 
     private void Update()
     {
-        LimitSteering();
+        Steering();
     }
 
     /// <summary>
@@ -51,14 +50,13 @@ public class Car : MonoBehaviour
     private void Steering()
     {
         float _motor = m_settings.maxMotorTorque * Input.GetAxis("Vertical");
-        float _steering = m_settings.maxSteeringAngle * Input.GetAxis("Horizontal");
 
         foreach (AxleInfo _axleInfo in m_axleInfos)
         {
             if (_axleInfo.steering)
             {
-                _axleInfo.leftWheel.steerAngle = _steering;
-                _axleInfo.rightWheel.steerAngle = _steering;
+                _axleInfo.leftWheel.steerAngle = LimitSteering();
+                _axleInfo.rightWheel.steerAngle = LimitSteering();
             }
             if (_axleInfo.motor)
             {
@@ -77,10 +75,8 @@ public class Car : MonoBehaviour
         {
             if (_axleInfo.motor)
             {
-                _axleInfo.leftWheel.brakeTorque = m_settings.maxMotorTorque * Input.GetAxisRaw("Break");
-                _axleInfo.rightWheel.brakeTorque = m_settings.maxMotorTorque * Input.GetAxisRaw("Break");
-
-
+                _axleInfo.leftWheel.brakeTorque = m_settings.maxMotorTorque * m_currentSpeed * Input.GetAxisRaw("Break");
+                _axleInfo.rightWheel.brakeTorque = m_settings.maxMotorTorque * m_currentSpeed * Input.GetAxisRaw("Break");
             }
         }
     }
@@ -88,9 +84,13 @@ public class Car : MonoBehaviour
     /// <summary>
     /// Limits the maximum steering angle depending on the speed of the car.
     /// </summary>
-    private void LimitSteering()
+    private float LimitSteering()
     {
+        float _normalisedSteerReduction = m_settings.SteerAngleReduction.Evaluate((Mathf.Clamp(m_currentSpeed, 0, m_settings.maxSpeed) / m_settings.maxSpeed));
+        float _resultingSteerReduction = m_settings.maxSteeringAngle * _normalisedSteerReduction;
 
+        float _finalSteerAngle = Mathf.Clamp(_resultingSteerReduction, m_settings.minReductedSteerAngle, m_settings.maxSteeringAngle) * Input.GetAxis("Horizontal");
+        return _finalSteerAngle;
     }
 
     /// <summary>
