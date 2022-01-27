@@ -16,12 +16,13 @@ public class UImanager : MonoBehaviour
 
     private void Start()
     {
+
         highscore = PlayerPrefs.GetFloat("highscore", float.MaxValue);
 
 
         for (int i = 0; i < scoreboardNumbers.Length; i++)
         {
-            if (PlayerPrefs.GetFloat("scoreboardNumbers" + i) == 0)
+            if (PlayerPrefs.GetFloat("scoreboardNumbers" + i) == 0 || PlayerPrefs.HasKey("scoreboardNumbers" + i) != true)
             {
                 PlayerPrefs.SetFloat("scoreboardNumber" + i, float.MaxValue);
             }
@@ -71,7 +72,6 @@ public class UImanager : MonoBehaviour
                 return;
             }
         }
-        PlayerPrefs.Save();
     }
 
     public void Scoreboard()
@@ -85,8 +85,6 @@ public class UImanager : MonoBehaviour
         {
             scoreboardNumbers[i].text =(1 + i) + ": " + PlayerPrefs.GetFloat("scoreboardNumber" + i).ToString("0.0");
         }
-
-        PlayerPrefs.Save();
     }
 
     public void ResetAllPlayerPrefs()
