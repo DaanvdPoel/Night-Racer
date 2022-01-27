@@ -9,34 +9,47 @@ public class UImanager : MonoBehaviour
     [SerializeField] private Text highscoreText;
     [SerializeField] private GameObject scoreboard;
     [SerializeField] private Text[] scoreboardNumbers;
+    [SerializeField] private bool timeRunning;
 
     private float lapTime;
     private float highscore;
 
-    private void Awake()
+    private void Start()
     {
-        highscore = PlayerPrefs.GetFloat("highscore", 0);
+        highscore = PlayerPrefs.GetFloat("highscore", float.MaxValue);
 
-        if (PlayerPrefs.GetFloat("scoreboardNumbers1") == null)
+
+        for (int i = 0; i < scoreboardNumbers.Length; i++)
         {
-            for (int i = 0; i < scoreboardNumbers.Length; i++)
+            if (PlayerPrefs.GetFloat("scoreboardNumbers" + i) == 0)
             {
-                PlayerPrefs.SetFloat("scoreboardNumber" + i, 0);
+                PlayerPrefs.SetFloat("scoreboardNumber" + i, float.MaxValue);
             }
+            else return;
         }
+        
     }
 
     private void Update()
     {
-        raceTimer(true);
+        raceTimer(timeRunning);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Scoreboard();
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+            ResetAllPlayerPrefs();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            HighscoreCheck();
+
     }
 
     public void raceTimer(bool isRunning)
     {
         if (isRunning == true)
-        {
             lapTime = lapTime + Time.deltaTime;
-        }
+        
 
         lapTimeText.text = "Laptime: " + lapTime.ToString("0.0");
         highscoreText.text = "Highscore: " + highscore.ToString("0.0");
@@ -46,17 +59,38 @@ public class UImanager : MonoBehaviour
     {
         if (lapTime < highscore)
         {
-            PlayerPrefs.SetFloat("highscore", lapTime);
+            highscore = lapTime;
+            PlayerPrefs.SetFloat("highscore", highscore);
         }
+
+        for (int i = 0; i < scoreboardNumbers.Length; i++)
+        {
+            if (lapTime < PlayerPrefs.GetFloat("scoreboardNumber" + i))
+            {
+                PlayerPrefs.SetFloat("scoreboardNumber" + i, lapTime);
+                return;
+            }
+        }
+        PlayerPrefs.Save();
     }
 
     public void Scoreboard()
     {
-        scoreboard.SetActive(true);
+        if (scoreboard.active == false)
+            scoreboard.SetActive(true);
+        else if (scoreboard.active == true)
+            scoreboard.SetActive(false);
 
-        for (int i = 0; i < scoreboardNumbers.Length -1; i++)
+        for (int i = 0; i < scoreboardNumbers.Length; i++)
         {
-            scoreboardNumbers[i].text = "" + PlayerPrefs.GetFloat("scoreboardNumber" + i);
+            scoreboardNumbers[i].text =(1 + i) + ": " + PlayerPrefs.GetFloat("scoreboardNumber" + i).ToString("0.0");
         }
+
+        PlayerPrefs.Save();
+    }
+
+    public void ResetAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
