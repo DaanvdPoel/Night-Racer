@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CarSettings
   m_EditorClassIdentifier: 
   minReductedSteerAngle: 10
-  maxSteeringAngle: 25
+  maxSteeringAngle: 20
   maxSpeed: 200
   maxMotorTorque: 4500
   downForce: 2
