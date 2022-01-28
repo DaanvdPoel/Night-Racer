@@ -193,6 +193,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1621c2815d16e4e90bebf45745db6d, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &31079152 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3459395793640289478, guid: bc00fff30090fe24d83e60f9885ed25f, type: 3}
@@ -260,6 +261,9 @@ MonoBehaviour:
 =======
 --- !u!1 &56283798
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
+=======
+--- !u!1 &56283798
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,6 +288,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 143003339}
   m_Material: {fileID: 0}
@@ -326,6 +331,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8881403506362969561}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
+=======
+  m_GameObject: {fileID: 56283798}
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
   m_GameObject: {fileID: 56283798}
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
@@ -395,6 +403,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 904851933}
   - {fileID: 608163934}
   - {fileID: 143003340}
@@ -402,6 +411,8 @@ RectTransform:
   m_Father: {fileID: 636621254}
   m_RootOrder: 5
 =======
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
   - {fileID: 1775635413}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -502,6 +513,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1621c2815d16e4e90bebf45745db6d, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &537772080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e7a98e265b0f914695e7d38e8760c84, type: 3}
@@ -527,11 +539,14 @@ MonoBehaviour:
   m_UsePipelineSettings: 1
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 --- !u!4 &588956475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3877812122863312243, guid: d7d828c10f42a6d4e906aadafc74932b, type: 3}
   m_PrefabInstance: {fileID: 1770886340}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &608163933
 GameObject:
@@ -595,6 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 --- !u!1 &636621253
@@ -1202,6 +1219,7 @@ Transform:
   m_PrefabInstance: {fileID: 774660265}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &904851932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1376,11 @@ MonoBehaviour:
 --- !u!1001 &935776449
 PrefabInstance:
   m_ObjectHideFlags: 0
+=======
+--- !u!1001 &935776449
+PrefabInstance:
+  m_ObjectHideFlags: 0
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 645229534}
@@ -1896,6 +1919,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4581ee30b6c3d31429540c33b6e43871, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1419664340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2265,6 +2289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 --- !u!4 &1494216378 stripped
@@ -3144,7 +3170,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5be6415de2499f1418504c594691c147, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -151
+=======
+      value: -223.34476
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
       value: -223.34476
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
@@ -3156,7 +3186,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5be6415de2499f1418504c594691c147, type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -31.000006
+=======
+      value: -131.2
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
       value: -131.2
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
