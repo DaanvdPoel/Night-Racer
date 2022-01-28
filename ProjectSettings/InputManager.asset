@@ -151,6 +151,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Name: Submit
     descriptiveName: 
     descriptiveNegativeName: 
@@ -159,6 +160,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
 =======
+=======
+>>>>>>> parent of 66507e4 (Fixed "Bad scene" issue and removed urp)
     m_Name: Mouse ScrollWheel
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,5 +424,8 @@ InputManager:
     type: 1
     axis: 2
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
+<<<<<<< HEAD
+>>>>>>> parent of 66507e4 (Fixed "Bad scene" issue and removed urp)
+=======
 >>>>>>> parent of 66507e4 (Fixed "Bad scene" issue and removed urp)
     joyNum: 0
