@@ -7,6 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Materials/Others/Night-Sky.mat
   m_Name: Night-Sky
   m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
@@ -15,6 +16,17 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+=======
+  m_Name: Glass
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+>>>>>>> origin/Daan:Assets/Prefab/Roy/Glass.mat
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -47,6 +59,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD:Assets/Materials/Others/Night-Sky.mat
     - _FrontTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -57,6 +70,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+=======
+    - _MainTex:
+        m_Texture: {fileID: 0}
+>>>>>>> origin/Daan:Assets/Prefab/Roy/Glass.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -83,13 +100,21 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+<<<<<<< HEAD:Assets/Materials/Others/Night-Sky.mat
     - _DstBlend: 0
     - _Exposure: 0.31
+=======
+    - _DstBlend: 10
+>>>>>>> origin/Daan:Assets/Prefab/Roy/Glass.mat
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
+<<<<<<< HEAD:Assets/Materials/Others/Night-Sky.mat
     - _Mode: 0
+=======
+    - _Mode: 3
+>>>>>>> origin/Daan:Assets/Prefab/Roy/Glass.mat
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Rotation: 0
@@ -97,9 +122,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.6924528, g: 0.94420314, b: 1, a: 0.6313726}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
