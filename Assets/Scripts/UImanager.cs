@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class UImanager : MonoBehaviour
 {
-    [SerializeField] private Text lapTimeText;
-    [SerializeField] private Text highscoreText;
+    [SerializeField] private TextMeshProUGUI lapTimeText;
+    [SerializeField] private TextMeshProUGUI highscoreText;
     [SerializeField] private GameObject scoreboard;
-    [SerializeField] private Text[] scoreboardNumbers;
+    [SerializeField] private TextMeshProUGUI[] scoreboardNumbers;
     [SerializeField] private bool timeRunning;
 
     private float lapTime;
@@ -37,10 +38,6 @@ public class UImanager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backspace))
             ResetAllPlayerPrefs();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            HighscoreCheck();
-
     }
 
     public void raceTimer(bool isRunning)

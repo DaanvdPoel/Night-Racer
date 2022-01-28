@@ -43,4 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27593f490761edc428f2159987c983c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  lapTimeText: {fileID: 0}
+  highscoreText: {fileID: 0}
+  scoreboard: {fileID: 0}
+  scoreboardNumbers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  timeRunning: 1
