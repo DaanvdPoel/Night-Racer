@@ -6,6 +6,7 @@ using TMPro;
 
 public class UImanager : MonoBehaviour
 {
+
     [SerializeField] private TextMeshProUGUI lapTimeText;
     [SerializeField] private TextMeshProUGUI highscoreText;
     [SerializeField] private GameObject scoreboard;
