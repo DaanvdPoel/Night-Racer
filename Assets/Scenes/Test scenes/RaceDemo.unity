@@ -1820,15 +1820,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130126985318416128, guid: abaa1800cb91ee64d8a3abe70931c173, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.744
+      value: 5.838409
       objectReference: {fileID: 0}
     - target: {fileID: 5130126985318416128, guid: abaa1800cb91ee64d8a3abe70931c173, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.744
+      value: 5.838409
       objectReference: {fileID: 0}
     - target: {fileID: 5130126985318416128, guid: abaa1800cb91ee64d8a3abe70931c173, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.744
+      value: 5.838409
       objectReference: {fileID: 0}
     - target: {fileID: 5130126985318416131, guid: abaa1800cb91ee64d8a3abe70931c173, type: 3}
       propertyPath: m_checkpoints.Array.size
