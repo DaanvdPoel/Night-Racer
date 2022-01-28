@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class LapManager : MonoBehaviour
 {
     [SerializeField] private List<Collider> m_checkpoints;                      // A list of all checkpoints that have to be met in order.
-    [SerializeField] private UnityEvent m_onLapFinish;                          // Call the corresponding function when lap is finished.
 
-    private List<Collider> m_passedCheckPoints = new List<Collider>();          // The checkpoints that have been passed this round.                                 
+    private List<Collider> m_passedCheckPoints = new List<Collider>();          // The checkpoints that have been passed this round.   
+    private float m_msSinceLapStart = 0;
 
     private void OnTriggerExit(Collider other)
     {
@@ -20,8 +19,12 @@ public class LapManager : MonoBehaviour
                 // if you passed all the checkpoints, Only check for the first checkpoint to finish lap.
                 if (m_passedCheckPoints.Count == m_checkpoints.Count && other.gameObject == m_checkpoints[0].gameObject)
                 {
-                    m_onLapFinish.Invoke();
                     m_passedCheckPoints.Clear();
+
+                    StopCoroutine(LapTimer());
+                    Debug.Log("Lap Finished. Lap time: " + m_msSinceLapStart);
+                    m_msSinceLapStart = 0;
+
                     return;
                 }
 
@@ -46,7 +49,18 @@ public class LapManager : MonoBehaviour
             else if ( other.gameObject == m_checkpoints[0].gameObject)
             {
                 m_passedCheckPoints.Add(other);
+                Debug.Log("Start timer.");
+                StartCoroutine(LapTimer());
             }
+        }
+    }
+
+    private IEnumerator LapTimer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Time.deltaTime / 1000);
+            m_msSinceLapStart += Time.deltaTime;
         }
     }
 }
