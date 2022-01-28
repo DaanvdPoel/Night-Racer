@@ -11,7 +11,7 @@ public class UImanager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highscoreText;
     [SerializeField] private GameObject scoreboard;
     [SerializeField] private TextMeshProUGUI[] scoreboardNumbers;
-    [SerializeField] private bool timeRunning;
+    public bool timeRunning;
 
     private float lapTime;
     private float highscore;
