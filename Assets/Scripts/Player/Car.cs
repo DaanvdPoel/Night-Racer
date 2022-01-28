@@ -50,7 +50,7 @@ public class Car : MonoBehaviour
     /// </summary>
     private void Steering()
     {
-        float _motor = m_settings.maxMotorTorque * Input.GetAxisRaw("Vertical");
+        float _motor = m_settings.maxMotorTorque * Input.GetAxis("Vertical");
 
         foreach (AxleInfo _axleInfo in m_axleInfos)
         {
@@ -72,19 +72,10 @@ public class Car : MonoBehaviour
     /// </summary>
     private void Drift()
     {
-        if (Input.GetAxis("Break") > 0.1f)
+        foreach (AxleInfo _axleInfo in m_axleInfos)
         {
-            //foreach (AxleInfo _axleInfo in m_axleInfos)
-            //{
-            //    if (_axleInfo.motor)
-            //    {
-            //        _axleInfo.leftWheel.motorTorque = 0;
-            //        _axleInfo.rightWheel.motorTorque = 0;
-
-            //    }
-            //}
-            Vector3 _newVelocity = new Vector3(m_rigidBody.velocity.x, m_rigidBody.velocity.y, 0);
-            m_rigidBody.velocity = _newVelocity;
+            _axleInfo.leftWheel.brakeTorque = m_settings.maxMotorTorque * m_rigidBody.velocity.magnitude * Input.GetAxis("Break");
+            _axleInfo.rightWheel.brakeTorque = m_settings.maxMotorTorque * m_rigidBody.velocity.magnitude * Input.GetAxis("Break");
         }
     }
 

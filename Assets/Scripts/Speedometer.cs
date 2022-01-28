@@ -26,7 +26,7 @@ public class Speedometer : MonoBehaviour
         speed = target.velocity.magnitude * 3.6f;
 
         if (speedLabel != null)
-            speedLabel.text = ((int)speed) + " km/h";
+            speedLabel.text = ((int)speed) + "\n km/h";
         if (arrow != null)
             arrow.localEulerAngles =
                 new Vector3(0, 0, Mathf.Lerp(minSpeedArrowAngle, maxSpeedArrowAngle, speed / maxSpeed));

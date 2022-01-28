@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minReductedSteerAngle: 10
   maxSteeringAngle: 20
-  maxSpeed: 600
-  maxMotorTorque: 10500
-  downForce: 2
-  centerOfMass: {x: 0, y: 0, z: 0.25}
+  maxSpeed: 2000
+  maxMotorTorque: 3200
+  downForce: 4
+  centerOfMass: {x: 0, y: 0, z: 0}
   SteerAngleReduction:
     serializedVersion: 2
     m_Curve:
