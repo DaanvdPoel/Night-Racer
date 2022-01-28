@@ -14,7 +14,8 @@ public class LapManager : MonoBehaviour
     {
         // Its unnesesary to compare a tag, but its done to prevent the need for constant looping.
         if (other.CompareTag("Checkpoint"))
-        {
+        {           
+    
             if (m_passedCheckPoints.Count != 0)
             {
                 // if you passed all the checkpoints, Only check for the first checkpoint to finish lap.
