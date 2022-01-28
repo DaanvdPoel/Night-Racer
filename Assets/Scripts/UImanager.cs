@@ -84,13 +84,13 @@ public class UImanager : MonoBehaviour
         }
     }
 
-    //public void OnApplicationQuit()
-    //{
-    //    for (int i = 0; i < scoreboardNumbers.Length; i++)
-    //    {
-    //        PlayerPrefs.DeleteKey("scoreboardNumber" + i);
-    //    }
-   // }
+    public void OnApplicationQuit()
+    {
+        for (int i = 0; i < scoreboardNumbers.Length; i++)
+        {
+            PlayerPrefs.DeleteKey("scoreboardNumber" + i);
+        }
+    }
 
     public void ResetAllPlayerPrefs()
     {
