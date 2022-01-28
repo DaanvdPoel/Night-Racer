@@ -153,6 +153,7 @@ InputManager:
     m_Name: Mouse ScrollWheel
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -176,11 +177,16 @@ InputManager:
 =======
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
+=======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
@@ -305,6 +311,7 @@ InputManager:
     snap: 0
     invert: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     type: 0
     axis: 0
     joyNum: 0
@@ -372,6 +379,8 @@ InputManager:
     type: 2
     axis: 5
 =======
+=======
+>>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
 =======
 >>>>>>> parent of 55e45fe (Merge pull request #17 from DaanvdPoel/Tim)
     type: 1
