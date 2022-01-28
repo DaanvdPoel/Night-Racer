@@ -16,9 +16,7 @@ public class UImanager : MonoBehaviour
 
     private void Start()
     {
-
         highscore = PlayerPrefs.GetFloat("highscore", float.MaxValue);
-
 
         for (int i = 0; i < scoreboardNumbers.Length; i++)
         {
@@ -28,7 +26,6 @@ public class UImanager : MonoBehaviour
             }
             else return;
         }
-        
     }
 
     private void Update()
@@ -87,8 +84,16 @@ public class UImanager : MonoBehaviour
         }
     }
 
+    public void OnApplicationQuit()
+    {
+        for (int i = 0; i < scoreboardNumbers.Length; i++)
+        {
+            PlayerPrefs.DeleteKey("scoreboardNumber" + i);
+        }
+    }
+
     public void ResetAllPlayerPrefs()
     {
-        PlayerPrefs.DeleteAll();
+       PlayerPrefs.DeleteAll();
     }
 }
