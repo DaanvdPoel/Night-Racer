@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class UImanager : MonoBehaviour
 {
@@ -37,10 +38,6 @@ public class UImanager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backspace))
             ResetAllPlayerPrefs();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            HighscoreCheck();
-
     }
 
     public void raceTimer(bool isRunning)
